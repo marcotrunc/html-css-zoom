@@ -93,6 +93,7 @@ body{
 }
 /*left-nav*/
 .left-nav{
+    flex-basis: 25%;
 }
 button.btn{
     cursor: pointer;
@@ -115,18 +116,30 @@ button.btn{
 .options{
     height: 60px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .options i{
-    line-height: 60px;
     font-size: 0.5em;
     color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+}
+.options i:hover{
+    background-color: #a1a1a1;
 }
 .btn:hover{
     background-color: #a1a1a1;
 }
 /*right-nav*/
 .right-nav{
-    background-color: salmon;
+    flex-basis: 25%;
+    text-align: end;
 }
 .big-btn{
     height: 100%;
