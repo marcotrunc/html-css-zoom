@@ -14,7 +14,7 @@ body{
 .flex{
     display: flex;
 }
-.container{
+.wrapper{
     height: 100vh;
     background-color: black;
     display: flex;
@@ -45,7 +45,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
-    overflow-y: scroll;    
+    overflow-y: auto;    
 }
 
 .card-item{
@@ -75,7 +75,7 @@ body{
 
 /**** NAVBAR ****/
 .navbar{
-    flex-basis:70px;
+    height:70px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -83,11 +83,10 @@ body{
     margin-top: 5px;
 }
 /*main-nav*/
-.navbar .main-nav{
+.main-nav{
     flex-basis: 50%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 #share-screen i{
     color: limegreen;
@@ -95,7 +94,6 @@ body{
 /*left-nav*/
 .left-nav{
     flex-basis: 25%;
-    flex-wrap: wrap;
 }
 button.btn{
     cursor: pointer;
@@ -153,4 +151,52 @@ button.btn{
 }
 .big-btn:hover{
     filter: brightness(1.5);
+}
+
+@media screen and (max-width:1250px){
+.navbar{
+    height: 70px; 
+    justify-content: space-around;  
+    flex-wrap: nowrap; 
+}
+#polling, #record, #share-screen{
+    display: none;
+}
+.big-btn{
+    height: 70px;
+    width: 70%;
+}
+.left-nav{
+    flex-wrap:nowrap;
+}
+.main-nav{
+    flex-wrap: nowrap;
+}
+}
+
+@media screen and (max-width: 620px)
+{
+    .card-item{
+        width: 180px;
+        height: 350px;
+        margin: 0;
+    }
+    .navbar{
+        height: 70px; 
+        justify-content: center;
+        align-items: center;  
+    }
+    .fl-basis{
+        flex-basis: auto;
+    }
+    #chat, #manage-partecipants,#breakout, #invite, .options{
+        display: none;
+    }
+    .right-nav .big-btn{
+        height: auto;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+        padding: 4px 6px;
+    }
 }
